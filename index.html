@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Game Analysis Tunisia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    .console-box {
+      font-family: monospace;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 20px #00ff88;
+      color: #00ff88;
+      height: 250px;
+      overflow-y: auto;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .loading-screen {
+      font-family: monospace;
+      background: #000;
+      color: #00ff88;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      z-index: 50;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .hidden-screen {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+  <div id="loading" class="loading-screen">
+    <p>تحميل نظام التحليل... استنى شوية.</p>
+  </div>
+
+  <div id="mainContent" class="hidden-screen">
+
+    <header class="w-full bg-gray-800 p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-green-400">AI Game Analysis Tunisia</h1>
+
+      <nav class="space-x-4 space-x-reverse">
+        <a href="#how" class="hover:text-green-400">كيفاش يخدم</a>
+        <a href="#games" class="hover:text-green-400">الألعاب</a>
+        <a href="#start" class="hover:text-green-400">ابدأ</a>
+      </nav>
+    </header>
+
+    <section id="start" class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">
+        تحليل الألعاب بالذكاء الاصطناعي
+      </h2>
+
+      <p class="max-w-xl mb-8 text-gray-300">
+        منصة ترفيهية لتحليل ألعاب كيما Aviator و Mines و Penalty.
+        التحليل يعطيك معلومات وإحصائيات فقط، وما فماش ضمان للربح.
+        العملة المستعملة: TND.
+      </p>
+
+      <button id="startButton"
+        class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition">
+        ابدأ توّة
+      </button>
+
+      <div id="errorBox" class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6">
+        <h2 class="text-xl font-bold mb-2">⚠️ الحساب موش موجود</h2>
+
+        <p class="mb-4">
+          باش تستعمل المنصة، سجّل حسابك وتأكد من المعلومات.
+        </p>
+
+        <a href="https://standarttrack.com/?promo=983eb7d4-6826-42a9-a980-1bf1f16b995d&target=register"
+           target="_blank"
+           class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition">
+          سجّل حساب جديد
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-gray-800 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">
+        أمثلة إحصائية اليوم / TND
+      </h3>
+
+      <div class="grid md:grid-cols-2 gap-4 text-right max-w-4xl mx-auto text-sm text-green-300">
+        <p>👤 User ID: 1128473422 – 420 TND</p>
+        <p>👤 User ID: 9912384741 – 560 TND</p>
+        <p>👤 User ID: 3099234822 – 690 TND</p>
+        <p>👤 User ID: 1187339121 – 470 TND</p>
+        <p>👤 User ID: 4412900113 – 510 TND</p>
+        <p>👤 User ID: 8283721091 – 650 TND</p>
+        <p>👤 User ID: 7751937742 – 400 TND</p>
+        <p>👤 User ID: 5554921811 – 700 TND</p>
+        <p>👤 User ID: 1983238742 – 580 TND</p>
+        <p>👤 User ID: 3377749301 – 450 TND</p>
+      </div>
+    </section>
+
+    <section id="games" class="bg-gray-800 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">الألعاب المدعومة</h3>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">🎮 Aviator</h4>
+          <p class="text-gray-300">تحليل إحصائي للجولات والنتائج السابقة.</p>
+        </div>
+
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">💣 Mines</h4>
+          <p class="text-gray-300">عرض بيانات وأنماط اللعب بطريقة مبسطة.</p>
+        </div>
+
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">🥅 Penalty</h4>
+          <p class="text-gray-300">تحليل عام لحركة اللعب والإحصائيات.</p>
+        </div>
+
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">🐔 Chicken Road</h4>
+          <p class="text-gray-300">متابعة وتحليل نتائج الجولات السابقة.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="how" class="bg-gray-900 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">كيفاش يخدم</h3>
+
+      <div class="max-w-3xl mx-auto space-y-4 text-gray-300">
+        <p>📡 النظام يحلل بيانات الألعاب بشكل مستمر</p>
+        <p>💡 يعرض إحصائيات واتجاهات عامة</p>
+        <p>📲 المعلومات تظهر بطريقة سهلة وواضحة</p>
+        <p>⚠️ الاستعمال للترفيه فقط، وما فماش ضمان للربح</p>
+      </div>
+    </section>
+
+    <section class="bg-black py-12 px-6 text-center">
+      <h3 class="text-xl font-bold text-green-400 mb-4">Console log</h3>
+
+      <div class="console-box max-w-3xl mx-auto">
+        <p>[INFO] AI analysis system active ✅</p>
+        <p>[OK] Tunisia localization loaded</p>
+        <p>[OK] Currency set to TND</p>
+        <p>[NOTICE] Entertainment mode only</p>
+      </div>
+    </section>
+
+    <footer class="text-center text-gray-500 text-sm py-6">
+      © 2026 AI Game Analysis Tunisia. For entertainment purposes only.
+    </footer>
+
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loading").classList.add("hidden-screen");
+      document.getElementById("mainContent").classList.remove("hidden-screen");
+    }, 3000);
+
+    document.getElementById("startButton").addEventListener("click", () => {
+      document.getElementById("errorBox").classList.remove("hidden");
+    });
+  </script>
+
+</body>
+</html>
